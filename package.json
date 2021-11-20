@@ -1,0 +1,33 @@
+{
+    "name": "pendulum",
+    "version": "1.0.0",
+    "description": "Math go brrr.",
+    "author": "Antti <antti@antti.codes>",
+    "license": "MIT",
+    "private": true,
+    "scripts": {
+        "lint": "yarn eslint src --fix",
+        "format": "yarn prettier --write src",
+        "update": "yarn upgrade-interactive --latest",
+        "start": "yarn serve src -p 6767"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Chicken/Pendulum.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Chicken/Pendulum/issues"
+    },
+    "keywords": [
+        "pendulum"
+    ],
+    "homepage": "https://github.com/Chicken/Pendulum#readme",
+    "devDependencies": {
+        "eslint": "^8.2.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-import": "^2.23.4",
+        "prettier": "^2.3.2",
+        "serve": "^13.0.2"
+    }
+}

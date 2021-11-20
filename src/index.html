@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script defer src="main.js" type="module"></script>
+        <link rel="stylesheet" href="style.css" />
+        <title>Pendulum</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Woah a pendulum!</h1>
+            <div class="innerContainer">
+                <canvas id="canvas" width="1024" height="1024"></canvas>
+                <div hidden id="settings">
+                    <h2>Settings</h2>
+                    <h3>Global</h3>
+                    <span
+                        >Gravity:
+                        <input id="gravity" type="range" min="1" max="100"
+                    /></span>
+                    <br />
+                    <button id="add">Add a new pendulum</button>
+                    <button id="reset">Reset everything</button>
+                    <button id="share">Share state</button>
+                    <h3>Selected pendulum</h3>
+                    <p id="noneText">None</p>
+                    <div hidden id="selected">
+                        <span
+                            >Color: R:
+                            <input class="color" id="r" type="text" /> G:
+                            <input class="color" id="g" type="text" /> B:
+                            <input class="color" id="b" type="text"
+                        /></span>
+                        <br />
+                        <span
+                            >Trail length: <input id="trail" type="range"
+                            min="0" max="1000" value=></span
+                        >
+                        <br />
+                        <button id="remove">Remove</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>
+                &copy; Antti (<a href="mailto:antti@antti.codes"
+                    >antti@antti.codes</a
+                >) | MIT Licensed | Opensourced on
+                <a href="https://github.com/Chicken/Pendulum">GitHub</a>
+            </p>
+        </footer>
+    </body>
+</html>
