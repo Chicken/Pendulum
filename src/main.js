@@ -217,7 +217,7 @@ resetButton.addEventListener("click", () => {
     window.location.href = `${window.location.origin}${window.location.pathname}`;
 });
 
-shareButton.addEventListener("click", () => {
+shareButton.addEventListener("click", async () => {
     const url = `${window.location.origin}${window.location.pathname}#${btoa(
         JSON.stringify({
             g: gravitySlider.value,
@@ -225,7 +225,20 @@ shareButton.addEventListener("click", () => {
         })
     )}`;
     window.location.href = url;
-    copy(url);
+
+    const shortUrl = await fetch("https://antti.link/new", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            url: window.location.href,
+            force: true
+        })
+    }).then(res => res.json()).then(data => data.url).catch(() => null);
+
+    if (shortUrl) copy(shortUrl);
+    else copy(url);
 });
 
 redField.addEventListener("input", (e) => {
