@@ -294,7 +294,7 @@ if (data) {
         );
     });
     gravitySlider.value = data.g;
-    pendulums.forEach((p) => (p.gravity = data.g));
+    pendulums.forEach((p) => (p.gravity = data.g * 0.05));
 } else {
     pendulums.push(
         new Pendulum(
